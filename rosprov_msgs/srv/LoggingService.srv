@@ -1,0 +1,10 @@
+# starts data logging
+string domain_path
+string problem_path
+string data_path
+string planner_command
+bool use_problem_topic
+int64 a
+int64 b
+---
+int64 sum

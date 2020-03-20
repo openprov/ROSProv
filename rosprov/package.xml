@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+	<name>rosprov</name>
+	<version>0.0.0</version>
+	<description>ROSProv metapackage</description>
+	<maintainer email="senka.krivic@kcl.ac.uk">senka</maintainer>
+	<license>BSD</license>
+	<url type="website">https://github.com/openprov/ROSProv</url>
+
+	<buildtool_depend>catkin</buildtool_depend>
+
+        <run_depend>prov_logging</run_depend>
+        <run_depend>rosprov_msgs</run_depend>
+
+	<export>
+		<metapackage/>
+	</export>
+
+</package>
