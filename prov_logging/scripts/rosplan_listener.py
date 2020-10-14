@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import json
 import pickle
+import logging
 
 import genpy
 import rospy
@@ -13,20 +14,7 @@ from rosplan_planning_system.msg import PlannerOutput, ProblemInstance
 from visualization_msgs.msg import Marker, MarkerArray
 
 
-messages = []
-
-
-def callback(data, data_class):
-    connection_header = data._connection_header
-    print("[Sender: %s]" % connection_header["topic"])
-    messages.append({
-        "header": connection_header,
-        "data": data,
-    })
-    print(
-        str(data) + "\n" +
-        "--------------------------------------------------------"
-    )
+logger = logging.getLogger(__name__)
 
 
 ROSPLAN_TOPICS = {
@@ -76,23 +64,56 @@ def encode_ros_datatype(o):
 
 
 def export_log_json(filepath):
+    content = {
+        "params": params,
+        "messages": messages
+    }
     with open(filepath, "w") as f:
-        json.dump(messages, f, indent=2, default=encode_ros_datatype)
+        json.dump(content, f, indent=2, default=encode_ros_datatype)
+    logger.info("Session log is saved to: %s", filepath)
+
+
+def get_current_ros_params():
+    params = dict()
+    param_names = rospy.get_param_names()
+    for name in param_names:
+        root_name = name[1:].split("/", 1)[0]
+        if root_name in params:
+            continue
+        params[root_name] = rospy.get_param("/" + root_name)
+    return params
+
+
+def msg_listener(data, data_class):
+    connection_header = data._connection_header
+    logger.debug("Received message from <%s>", connection_header["topic"])
+    messages.append({
+        "header": connection_header,
+        "data": data,
+    })
+
+
+messages = []
+params = get_current_ros_params()
 
 
 def main():
-
+    run_id = params["run_id"]
     rospy.init_node('rosplan_listener', anonymous=False)
+    logger.info("Started logging message from session: %s", run_id)
 
     for topic, data_class in ROSPLAN_TOPICS.items():
-        rospy.Subscriber(topic, data_class, callback, data_class)
+        logger.debug("Subscribing topic: %s", topic)
+        rospy.Subscriber(topic, data_class, msg_listener, data_class)
 
     try:
         # spin() simply keeps python from exiting until this node is stopped
         rospy.spin()
     finally:
-        export_log_json("logs/session.json")
+        filepath = "logs/session-%s.json" % run_id
+        export_log_json(filepath)
 
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.DEBUG)
     main()
