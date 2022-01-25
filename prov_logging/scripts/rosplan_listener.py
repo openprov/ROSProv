@@ -2,6 +2,7 @@
 import json
 import pickle
 import logging
+import time
 
 import genpy
 import rospy
@@ -66,6 +67,8 @@ def encode_ros_datatype(o):
 def export_log_json(filepath):
     content = {
         "params": params,
+        "start_time": start_time_real,
+        "ros_time": start_time_ros,
         "messages": messages
     }
     with open(filepath, "w") as f:
@@ -95,12 +98,19 @@ def msg_listener(data, data_class):
 
 messages = []
 params = get_current_ros_params()
+start_time_real = None
+start_time_ros = None
 
 
 def main():
     run_id = params["run_id"]
     rospy.init_node('rosplan_listener', anonymous=False)
     logger.info("Started logging message from session: %s", run_id)
+
+    # recording the current time
+    start_time_real = time.time()
+    start_time_ros = rospy.get_rostime()
+    print(start_time_real, start_time_ros)
 
     for topic, data_class in ROSPLAN_TOPICS.items():
         logger.debug("Subscribing topic: %s", topic)
