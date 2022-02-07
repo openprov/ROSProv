@@ -11,7 +11,7 @@ from std_msgs.msg import String
 from actionlib_msgs.msg import GoalID, GoalStatusArray
 from rosplan_dispatch_msgs.msg import EsterelPlan, ActionDispatch, ActionFeedback, NonBlockingDispatchActionFeedback, NonBlockingDispatchActionGoal, NonBlockingDispatchActionResult, PlanActionFeedback, PlanActionGoal, PlanActionResult
 from rosplan_knowledge_msgs.msg import DomainFormula, StatusUpdate
-from rosplan_planning_system.msg import PlannerOutput, ProblemInstance
+# from rosplan_planning_system.msg import PlannerOutput, ProblemInstance
 from visualization_msgs.msg import Marker, MarkerArray
 
 
@@ -30,13 +30,13 @@ ROSPLAN_TOPICS = {
     "/rosplan_plan_dispatcher/dispatch_plan_action/result": NonBlockingDispatchActionResult,
     # "/rosplan_plan_dispatcher/dispatch_plan_action/status": GoalStatusArray,
     # "/rosplan_plan_dispatcher/plan_graph": String,
-    "/rosplan_planner_interface/planner_output": PlannerOutput,
+    # "/rosplan_planner_interface/planner_output": PlannerOutput,
     "/rosplan_planner_interface/start_planning/cancel": GoalID,
     "/rosplan_planner_interface/start_planning/feedback": PlanActionFeedback,
     "/rosplan_planner_interface/start_planning/goal": PlanActionGoal,
     "/rosplan_planner_interface/start_planning/result": PlanActionResult,
     # "/rosplan_planner_interface/start_planning/status": GoalStatusArray,
-    "/rosplan_problem_interface/problem_instance": ProblemInstance,
+    # "/rosplan_problem_interface/problem_instance": ProblemInstance,
     "/rosplan_roadmap_server/viz/edges": Marker,
     "/rosplan_roadmap_server/viz/edges_array": MarkerArray,
     "/rosplan_roadmap_server/viz/waypoints": Marker,
@@ -108,6 +108,7 @@ def main():
     logger.info("Started logging message from session: %s", run_id)
 
     # recording the current time
+    global start_time_real, start_time_ros
     start_time_real = time.time()
     start_time_ros = rospy.get_rostime()
     print(start_time_real, start_time_ros)
