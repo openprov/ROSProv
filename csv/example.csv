@@ -1,0 +1,93 @@
+plan_action,plans/0,actions/0,GotoWaypointAction,actions/0/0,UndispatchedAction,0,9.0,0.0,freddie,"{""from"": ""initial-point"", ""to"": ""fire-safety-board""}"
+plan_action,plans/0,actions/1,LookAtAction,actions/1/0,UndispatchedAction,1,2.0,9.00100040435791,freddie,"{""p"": ""fire_safety_board"", ""place"": ""fire-safety-board""}"
+plan_action,plans/0,actions/2,GotoWaypointAction,actions/2/0,UndispatchedAction,2,43.0,11.001999855041504,freddie,"{""from"": ""fire-safety-board"", ""to"": ""fire-extinguisher""}"
+plan_action,plans/0,actions/3,LookAtAction,actions/3/0,UndispatchedAction,3,2.0,54.00299835205078,freddie,"{""p"": ""fire_extinguisher"", ""place"": ""fire-extinguisher""}"
+plan_action,plans/0,actions/4,GotoWaypointAction,actions/4/0,UndispatchedAction,4,20.0,56.00400161743164,freddie,"{""from"": ""fire-extinguisher"", ""to"": ""sink""}"
+plan_action,plans/0,actions/5,GraspObjectAction,actions/5/0,UndispatchedAction,5,2.0,76.00499725341797,freddie,"{""p"": ""cloth1"", ""place"": ""sink""}"
+plan_action,plans/0,actions/6,GotoWaypointAction,actions/6/0,UndispatchedAction,6,128.0,78.00599670410156,freddie,"{""from"": ""sink"", ""to"": ""desk1""}"
+plan_action,plans/0,actions/7,WipeLocationAction,actions/7/0,UndispatchedAction,7,15.0,206.0070037841797,freddie,"{""loc"": ""desk1"", ""obj"": ""cloth1""}"
+plan_action,plans/0,actions/8,GotoWaypointAction,actions/8/0,UndispatchedAction,8,49.0,221.00799560546875,freddie,"{""from"": ""desk1"", ""to"": ""desk2""}"
+plan_action,plans/0,actions/9,WipeLocationAction,actions/9/0,UndispatchedAction,9,15.0,270.0090026855469,freddie,"{""loc"": ""desk2"", ""obj"": ""cloth1""}"
+plan_action,plans/0,actions/10,GotoWaypointAction,actions/10/0,UndispatchedAction,10,7.0,285.010009765625,freddie,"{""from"": ""desk2"", ""to"": ""desk4""}"
+plan_action,plans/0,actions/11,WipeLocationAction,actions/11/0,UndispatchedAction,11,15.0,292.010986328125,freddie,"{""loc"": ""desk4"", ""obj"": ""cloth1""}"
+plan_action,plans/0,actions/12,GotoWaypointAction,actions/12/0,UndispatchedAction,12,30.0,307.0119934082031,freddie,"{""from"": ""desk4"", ""to"": ""desk3""}"
+plan_action,plans/0,actions/13,WipeLocationAction,actions/13/0,UndispatchedAction,13,15.0,337.01300048828125,freddie,"{""loc"": ""desk3"", ""obj"": ""cloth1""}"
+plan_action,plans/0,actions/14,GotoWaypointAction,actions/14/0,UndispatchedAction,14,41.0,352.0140075683594,freddie,"{""from"": ""desk3"", ""to"": ""desk5""}"
+plan_action,plans/0,actions/15,WipeLocationAction,actions/15/0,UndispatchedAction,15,15.0,393.0150146484375,freddie,"{""loc"": ""desk5"", ""obj"": ""cloth1""}"
+plan_action,plans/0,actions/16,GotoWaypointAction,actions/16/0,UndispatchedAction,16,75.0,408.0159912109375,freddie,"{""from"": ""desk5"", ""to"": ""sink""}"
+plan_action,plans/0,actions/17,BinObjectAction,actions/17/0,UndispatchedAction,17,2.5,483.0169982910156,freddie,"{""p"": ""cloth1"", ""place"": ""sink""}"
+plan_action,plans/0,actions/18,GotoWaypointAction,actions/18/0,UndispatchedAction,18,86.0,485.51800537109375,freddie,"{""from"": ""sink"", ""to"": ""desk5-shelves""}"
+plan_action,plans/0,actions/19,GraspObjectAction,actions/19/0,UndispatchedAction,19,2.0,571.5189819335938,freddie,"{""p"": ""safety_record_folder"", ""place"": ""desk5-shelves""}"
+plan_action,plans/0,actions/20,FindPersonAction,actions/20/0,UndispatchedAction,20,100.0,573.52001953125,freddie,"{""p"": ""diego"", ""from"": ""desk5-shelves"", ""loc"": ""unknown_diego_location""}"
+plan_action,plans/0,actions/21,GiveObjectAction,actions/21/0,UndispatchedAction,21,2.0,673.52099609375,freddie,"{""o"": ""safety_record_folder"", ""place"": ""unknown_diego_location"", ""per"": ""diego""}"
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/0,actions/0/1,DispatchedAction,actions/0/0,,0,rosplan_plan_dispatcher/action_dispatch/0
+action_received,actions/0/2,actions/0/1,0,rosplan_plan_dispatcher/action_feedback/1,rosplan_plan_dispatcher/action_dispatch/0
+action_completed,actions/0/3,CompletedAction,actions/0/2,0,rosplan_plan_dispatcher/action_feedback/2
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/1,actions/1/1,DispatchedAction,actions/1/0,actions/0/3,1,rosplan_plan_dispatcher/action_dispatch/1
+action_received,actions/1/2,actions/1/1,1,rosplan_plan_dispatcher/action_feedback/3,rosplan_plan_dispatcher/action_dispatch/1
+action_completed,actions/1/3,CompletedAction,actions/1/2,1,rosplan_plan_dispatcher/action_feedback/4
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/2,actions/2/1,DispatchedAction,actions/2/0,actions/1/3,2,rosplan_plan_dispatcher/action_dispatch/2
+action_received,actions/2/2,actions/2/1,2,rosplan_plan_dispatcher/action_feedback/5,rosplan_plan_dispatcher/action_dispatch/2
+action_completed,actions/2/3,CompletedAction,actions/2/2,2,rosplan_plan_dispatcher/action_feedback/6
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/3,actions/3/1,DispatchedAction,actions/3/0,actions/2/3,3,rosplan_plan_dispatcher/action_dispatch/3
+action_received,actions/3/2,actions/3/1,3,rosplan_plan_dispatcher/action_feedback/7,rosplan_plan_dispatcher/action_dispatch/3
+action_completed,actions/3/3,CompletedAction,actions/3/2,3,rosplan_plan_dispatcher/action_feedback/8
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/4,actions/4/1,DispatchedAction,actions/4/0,actions/3/3,4,rosplan_plan_dispatcher/action_dispatch/4
+action_received,actions/4/2,actions/4/1,4,rosplan_plan_dispatcher/action_feedback/9,rosplan_plan_dispatcher/action_dispatch/4
+action_completed,actions/4/3,CompletedAction,actions/4/2,4,rosplan_plan_dispatcher/action_feedback/10
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/5,actions/5/1,DispatchedAction,actions/5/0,actions/4/3,5,rosplan_plan_dispatcher/action_dispatch/5
+action_received,actions/5/2,actions/5/1,5,rosplan_plan_dispatcher/action_feedback/11,rosplan_plan_dispatcher/action_dispatch/5
+action_completed,actions/5/3,CompletedAction,actions/5/2,5,rosplan_plan_dispatcher/action_feedback/12
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/6,actions/6/1,DispatchedAction,actions/6/0,actions/5/3,6,rosplan_plan_dispatcher/action_dispatch/6
+action_received,actions/6/2,actions/6/1,6,rosplan_plan_dispatcher/action_feedback/13,rosplan_plan_dispatcher/action_dispatch/6
+action_completed,actions/6/3,CompletedAction,actions/6/2,6,rosplan_plan_dispatcher/action_feedback/14
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/7,actions/7/1,DispatchedAction,actions/7/0,actions/6/3,7,rosplan_plan_dispatcher/action_dispatch/7
+action_received,actions/7/2,actions/7/1,7,rosplan_plan_dispatcher/action_feedback/15,rosplan_plan_dispatcher/action_dispatch/7
+action_completed,actions/7/3,CompletedAction,actions/7/2,7,rosplan_plan_dispatcher/action_feedback/16
+action_received,actions/8/1,actions/8/0,8,rosplan_plan_dispatcher/action_feedback/17,
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/8,actions/8/2,DispatchedAction,actions/8/1,,8,rosplan_plan_dispatcher/action_dispatch/8
+action_completed,actions/8/3,CompletedAction,actions/8/2,8,rosplan_plan_dispatcher/action_feedback/18
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/9,actions/9/1,DispatchedAction,actions/9/0,actions/8/3,9,rosplan_plan_dispatcher/action_dispatch/9
+action_received,actions/9/2,actions/9/1,9,rosplan_plan_dispatcher/action_feedback/19,rosplan_plan_dispatcher/action_dispatch/9
+action_completed,actions/9/3,CompletedAction,actions/9/2,9,rosplan_plan_dispatcher/action_feedback/20
+action_received,actions/10/1,actions/10/0,10,rosplan_plan_dispatcher/action_feedback/21,
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/10,actions/10/2,DispatchedAction,actions/10/1,,10,rosplan_plan_dispatcher/action_dispatch/10
+action_completed,actions/10/3,CompletedAction,actions/10/2,10,rosplan_plan_dispatcher/action_feedback/22
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/11,actions/11/1,DispatchedAction,actions/11/0,actions/10/3,11,rosplan_plan_dispatcher/action_dispatch/11
+action_received,actions/11/2,actions/11/1,11,rosplan_plan_dispatcher/action_feedback/23,rosplan_plan_dispatcher/action_dispatch/11
+action_completed,actions/11/3,CompletedAction,actions/11/2,11,rosplan_plan_dispatcher/action_feedback/24
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/12,actions/12/1,DispatchedAction,actions/12/0,actions/11/3,12,rosplan_plan_dispatcher/action_dispatch/12
+action_received,actions/12/2,actions/12/1,12,rosplan_plan_dispatcher/action_feedback/25,rosplan_plan_dispatcher/action_dispatch/12
+action_completed,actions/12/3,CompletedAction,actions/12/2,12,rosplan_plan_dispatcher/action_feedback/26
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/13,actions/13/1,DispatchedAction,actions/13/0,actions/12/3,13,rosplan_plan_dispatcher/action_dispatch/13
+action_received,actions/13/2,actions/13/1,13,rosplan_plan_dispatcher/action_feedback/27,rosplan_plan_dispatcher/action_dispatch/13
+action_completed,actions/13/3,CompletedAction,actions/13/2,13,rosplan_plan_dispatcher/action_feedback/28
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/14,actions/14/1,DispatchedAction,actions/14/0,actions/13/3,14,rosplan_plan_dispatcher/action_dispatch/14
+action_received,actions/14/2,actions/14/1,14,rosplan_plan_dispatcher/action_feedback/29,rosplan_plan_dispatcher/action_dispatch/14
+action_completed,actions/14/3,CompletedAction,actions/14/2,14,rosplan_plan_dispatcher/action_feedback/30
+action_received,actions/15/1,actions/15/0,15,rosplan_plan_dispatcher/action_feedback/31,
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/15,actions/15/2,DispatchedAction,actions/15/1,,15,rosplan_plan_dispatcher/action_dispatch/15
+action_completed,actions/15/3,CompletedAction,actions/15/2,15,rosplan_plan_dispatcher/action_feedback/32
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/16,actions/16/1,DispatchedAction,actions/16/0,actions/15/3,16,rosplan_plan_dispatcher/action_dispatch/16
+action_received,actions/16/2,actions/16/1,16,rosplan_plan_dispatcher/action_feedback/33,rosplan_plan_dispatcher/action_dispatch/16
+action_completed,actions/16/3,CompletedAction,actions/16/2,16,rosplan_plan_dispatcher/action_feedback/34
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/17,actions/17/1,DispatchedAction,actions/17/0,actions/16/3,17,rosplan_plan_dispatcher/action_dispatch/17
+action_received,actions/17/2,actions/17/1,17,rosplan_plan_dispatcher/action_feedback/35,rosplan_plan_dispatcher/action_dispatch/17
+action_completed,actions/17/3,CompletedAction,actions/17/2,17,rosplan_plan_dispatcher/action_feedback/36
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/18,actions/18/1,DispatchedAction,actions/18/0,actions/17/3,18,rosplan_plan_dispatcher/action_dispatch/18
+action_received,actions/18/2,actions/18/1,18,rosplan_plan_dispatcher/action_feedback/37,rosplan_plan_dispatcher/action_dispatch/18
+action_completed,actions/18/3,CompletedAction,actions/18/2,18,rosplan_plan_dispatcher/action_feedback/38
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/19,actions/19/1,DispatchedAction,actions/19/0,actions/18/3,19,rosplan_plan_dispatcher/action_dispatch/19
+action_received,actions/19/2,actions/19/1,19,rosplan_plan_dispatcher/action_feedback/39,rosplan_plan_dispatcher/action_dispatch/19
+action_completed,actions/19/3,CompletedAction,actions/19/2,19,rosplan_plan_dispatcher/action_feedback/40
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/20,actions/20/1,DispatchedAction,actions/20/0,actions/19/3,20,rosplan_plan_dispatcher/action_dispatch/20
+action_received,actions/20/2,actions/20/1,20,rosplan_plan_dispatcher/action_feedback/41,rosplan_plan_dispatcher/action_dispatch/20
+action_completed,actions/20/3,CompletedAction,actions/20/2,20,rosplan_plan_dispatcher/action_feedback/42
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/21,actions/21/1,DispatchedAction,actions/21/0,actions/20/3,21,rosplan_plan_dispatcher/action_dispatch/21
+action_received,actions/21/2,actions/21/1,21,rosplan_plan_dispatcher/action_feedback/43,rosplan_plan_dispatcher/action_dispatch/21
+action_completed,actions/21/3,CompletedAction,actions/21/2,21,rosplan_plan_dispatcher/action_feedback/44
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/22,actions/0/4,ActionBeingCancelled,actions/0/3,actions/21/3,0,rosplan_plan_dispatcher/action_dispatch/22
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/23,actions/1/4,ActionBeingCancelled,actions/1/3,actions/21/3,1,rosplan_plan_dispatcher/action_dispatch/23
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/25,actions/3/4,ActionBeingCancelled,actions/3/3,actions/21/3,3,rosplan_plan_dispatcher/action_dispatch/25
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/26,actions/4/4,ActionBeingCancelled,actions/4/3,actions/21/3,4,rosplan_plan_dispatcher/action_dispatch/26
+action_dispatched,rosplan_plan_dispatcher/action_dispatch/43,actions/21/4,ActionBeingCancelled,actions/21/3,actions/21/4,21,rosplan_plan_dispatcher/action_dispatch/43

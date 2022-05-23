@@ -1,0 +1,39 @@
+{
+  "group": "org.openprovenance.rosprov",
+  "name": "templates",
+  "destination": "target/libs/",
+  "description": "ROSProv",
+  "version": "0.1.0",
+  "init_package": "org.openprovenance.rosprov",
+  "logger": "Logger",
+  "logger_package": "org.openprovenance.rosprov.client",
+  "script": "rosprov",
+  "script_dir": "target/bin",
+  "jsweet": true,
+  "sbean": true,
+  "jsonschema": "schema.json",
+  "sqlFile": "template.sql",
+  "documentation": "doc.html",
+  "templates" : [
+    { "name": "plan_action",
+      "template": "templates/plan_action.provn",
+      "package": "org.openprovenance.rosprov",
+      "bindings": "templates/plan_action_bindings.json"
+    },
+    { "name": "action_dispatched",
+      "template": "templates/action_dispatched.provn",
+      "package": "org.openprovenance.rosprov",
+      "bindings": "templates/action_dispatched_bindings.json"
+    },
+    { "name": "action_received",
+      "template": "templates/action_received.provn",
+      "package": "org.openprovenance.rosprov",
+      "bindings": "templates/action_received_bindings.json"
+    },
+    { "name": "action_completed",
+      "template": "templates/action_completed.provn",
+      "package": "org.openprovenance.rosprov",
+      "bindings": "templates/action_completed_bindings.json"
+    }
+  ]
+}

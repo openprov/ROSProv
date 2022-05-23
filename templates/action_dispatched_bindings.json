@@ -1,0 +1,41 @@
+{
+  "var": {
+    "dispatching": [
+      { "@id": "act:*",
+        "@documentation": "The activity identifier"
+      }
+    ],
+    "action": [
+      { "@id": "rs:*" }
+    ],
+    "type": [
+      { "@id": "rpl:*" }
+    ],
+    "from_action": [
+      { "@id": "rs:*" }
+    ],
+    "trigger_action": [
+      { "@id": "rs:*" }
+    ],
+    "action_id": [
+      [
+        {
+          "@value": "*",
+          "@type": "xsd:int"
+        }
+      ]
+    ],
+    "message": [
+      {
+        "@id": "msg:*"
+      }
+    ]
+  },
+  "context": {
+    "ros": "http://openprovenance.org/ns/ros#",
+    "rpl": "http://openprovenance.org/ns/rosplan#",
+    "rs": "http://example.org/ros_session/",
+    "act": "http://example.org/act/",
+    "msg": "http://example.org/messages/"
+  }
+}

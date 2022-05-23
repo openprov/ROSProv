@@ -1,0 +1,35 @@
+{
+  "var": {
+    "action": [
+      { "@id": "rs:*" }
+    ],
+    "from_action": [
+      { "@id": "rs:*" }
+    ],
+    "action_id": [
+      [
+        {
+          "@value": "*",
+          "@type": "xsd:int"
+        }
+      ]
+    ],
+    "message": [
+      {
+        "@id": "msg:*"
+      }
+    ],
+    "from_message": [
+      {
+        "@id": "msg:*"
+      }
+    ]
+  },
+  "context": {
+    "ros": "http://openprovenance.org/ns/ros#",
+    "rpl": "http://openprovenance.org/ns/rosplan#",
+    "rs": "http://example.org/ros_session/",
+    "act": "http://example.org/act/",
+    "msg": "http://example.org/messages/"
+  }
+}

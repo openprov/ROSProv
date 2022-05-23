@@ -1,0 +1,24 @@
+document
+  prefix tmpl <http://openprovenance.org/tmpl#>
+  prefix var <http://openprovenance.org/var#>
+  prefix vargen <http://openprovenance.org/vargen#>
+
+  bundle vargen:b
+    prefix ros <http://openprovenance.org/ns/ros#>
+    prefix rpl <http://openprovenance.org/ns/rosplan#>
+
+    entity(var:from_action)
+    entity(var:action, 
+      [ prov:type='var:type'
+      ]
+    )
+    entity(var:message,
+      [ prov:type='ros:Message',
+        prov:type='rpl:ActionFeedbackMessage',
+        rpl:action_id='var:action_id'
+      ]
+    )
+    wasDerivedFrom(var:action, var:from_action)
+    wasDerivedFrom(var:action, var:message)
+  endBundle
+endDocument

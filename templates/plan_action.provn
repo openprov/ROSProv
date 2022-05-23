@@ -1,0 +1,33 @@
+document
+  prefix tmpl <http://openprovenance.org/tmpl#>
+  prefix var <http://openprovenance.org/var#>
+  prefix vargen <http://openprovenance.org/vargen#>
+
+  bundle vargen:b
+    prefix ros <http://openprovenance.org/ns/ros#>
+    prefix rpl <http://openprovenance.org/ns/rosplan#>
+
+    entity(var:plan,
+      [ prov:type='rpl:Plan'
+      ]
+    )
+    entity(var:action_generic,
+      [ prov:type='rpl:Action',
+        prov:type='var:action_type',
+        rpl:action_id='var:action_id',
+        rpl:action_duration='var:duration',
+        rpl:action_dispatch_time='var:dispatch_time',
+        rpl:action_subject='var:subject',
+        // rpl:action_from='var:from',
+        // rpl:action_to='var:to',
+        rpl:action_parameters='var:parameters'
+      ]
+    )
+    hadMember(var:plan, var:action_generic)
+    entity(var:action, 
+      [ prov:type='var:type'
+      ]
+    )
+    specializationOf(var:action, var:action_generic)
+  endBundle
+endDocument

@@ -1,0 +1,85 @@
+{
+    "var":
+    {
+        "plan":
+        [
+            {
+                "@id": "rs:*"
+            }
+        ],
+        "action_generic":
+        [
+            {
+                "@id": "rs:*"
+            }
+        ],
+        "action_type":
+        [
+            {
+                "@id": "rpl:*"
+            }
+        ],
+        "action":
+        [
+            {
+                "@id": "rs:*"
+            }
+        ],
+        "type":
+        [
+            {
+                "@id": "rpl:*"
+            }
+        ],
+        "action_id":
+        [
+            [
+                {
+                    "@value": "*",
+                    "@type": "xsd:int"
+                }
+            ]
+        ],
+        "duration":
+        [
+            [
+                {
+                    "@value": "*",
+                    "@type": "xsd:float"
+                }
+            ]
+        ],
+        "dispatch_time":
+        [
+            [
+                {
+                    "@value": "*",
+                    "@type": "xsd:float"
+                }
+            ]
+        ],
+        "subject":
+        [
+            [
+                {
+                    "@value": "*",
+                    "@type": "xsd:string"
+                }
+            ]
+        ],
+        "parameters":
+        [
+            [
+                {
+                    "@value": "*",
+                    "@type": "xsd:string"
+                }
+            ]
+        ]
+    },
+    "context": {
+        "ros": "http://openprovenance.org/ns/ros#",
+        "rpl": "http://openprovenance.org/ns/rosplan#",
+        "rs": "http://example.org/ros_session/"
+    }
+}
